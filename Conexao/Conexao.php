@@ -3,7 +3,7 @@
 class Conexao {
     public static $conexao;
 
-    private function __construct(){
+    public function __construct(){
 
     }
 
@@ -11,7 +11,7 @@ class Conexao {
         if (!isset(self::$conexao)) {
             self::$conexao = new PDO('mysql:host=localhost;
             dbname=db_lista_contatos', 
-            'user', 'Luiz250800@');
+            'user', '');
         }
   
         return self::$conexao;
